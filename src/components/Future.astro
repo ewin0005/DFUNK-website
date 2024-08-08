@@ -1,0 +1,292 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fremtidsveje</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="fremtidsvej">
+        <header class="title-row">
+            <div class="lines">
+                <div class="orange-line"></div>
+                <div class="black-line"></div>
+            </div>
+            <h2>Fremtidsveje</h2>
+        </header>
+        
+        <p class="description">Fremtidsveje er DFUNK’s uddannelses- og jobrettede projekt, der i samarbejde med arbejdsgivende virksomheder, 
+            kommuner og andre aktører støtter unge med flugterfaringer i at arbejde sig hen mod deres drømme og ambitioner for fremtiden.
+        </p>
+        
+        <div class="video-container">
+            <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/cFoNpMiRqcA?si=B8xE8nLra2JntZxP" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <h2 class="projects-header">Fremtidsvejes projekter</h2>
+        
+        <ul class="custom-list">
+            <li class="custom-list-item">
+                <div class="item-content">
+                    <div class="text-content">
+                        <h3>Makker-par</h3>
+                        <p>Unge med flugterfaringer har, ligesom andre unge, håb og ønsker for fremtiden. Ønsker om at uddanne sig, få et godt arbejde og bidrage til det danske samfund.</p>
+                        <p>Sammen udforsker I fremtidsmuligheder for uddannelse og job i uformelle hverdagsrammer, og bruger tid på oplevelser og aktiviteter, som I synes er fede, f.eks. afghansk filmfestival, bowling, kage på café, udveksling af madkulturer og fodbold på stadion.</p>
+                    </div>
+                    <img src="/images/makker-par-fremtid.png" class="img" alt="makker-par-image">
+                </div>
+            </li>
+            <li class="custom-list-item-reversed">
+                <div class="item-content">
+                    <img src="/images/fagmentor.png" class="img" alt="fagmentor-image">
+                    <div class="text-content">
+                        <h3>Fagmentor</h3>
+                        <p>Vores fagmentor-indsats er en unik mulighed for unge med flugterfaring til at få personlig og relevant vejledning og støtte. Vi tror på, at vores initiativ kan hjælpe unge med at opnå deres mål og opbygge deres karriere i Danmark. Besøg vores side for at lære mere om vores fagmentor-indsats og hvordan du kan tilmelde dig som en ung med flugterfaring eller som en erfaren fagmentor.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="custom-list-item">
+                <div class="item-content">
+                    <div class="text-content">
+                        <h3>Fremtidsakademi</h3>
+                        <p>Fremtidsakademiet er et sted hvor unge med flugterfaring får mulighed for at deltage og få masser af inspiration og viden om uddannelses- og jobmuligheder i Danmark. Det er en unik mulighed for at komme tættere på deres drømme og få styrket deres kompetencer.</p>
+                    </div>
+                    <img src="/images/fremtidsakademi.png" class="img" alt="fremtidsakademi-image">
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+
+
+<style>
+/* Define CSS variables to make it a bit easier to use them again */
+/* also reduces redundency YAY :)*/
+:root {
+    --black-color: #000000;
+    --orange-color: #FA4B00;
+    --white-color: #F0F0F0;
+    --font-size-large: 60px;
+    --font-size-medium: 30px;
+    --font-size-small: 20px;
+}
+
+/* Ensure the full width and height of the viewport are utilized */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.fremtidsvej {
+    gap: 20px;
+    min-height: 100vh;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.title-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--black-color);
+    width: 100%;
+    margin-top: 60px;
+}
+
+.title-row h2 {
+    margin: 0;
+    margin-left: 40px;
+    font-size: var(--font-size-large);
+    font-weight: bolder;
+}
+
+.lines {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: 470px;
+    gap: 20px;
+    width: 50%;
+}
+
+.black-line, .orange-line {
+    height: 3px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 10px;
+}
+
+.black-line {
+    background: var(--black-color);
+}
+
+.orange-line {
+    background: var(--orange-color);
+}
+
+.description {
+    color: var(--black-color);
+    font-size: 22px;
+    padding: 40px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+iframe {
+    width: 100%;
+    height: 60vh;
+    border-radius: 10px;
+}
+
+.projects-header {
+    margin: 0;
+    margin-top: 60px;
+    margin-left: 40px;
+    font-size: var(--font-size-large);
+    font-weight: bolder;
+}
+
+.custom-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 30px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.custom-list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: var(--orange-color);
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.custom-list-item-reversed {
+    flex-direction: row-reverse;
+    padding: 10px;
+    background-color: var(--white-color);
+    border: 5px solid var(--orange-color);
+}
+
+.item-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    padding: 20px;
+}
+
+.text-content h3 {
+    font-weight: bolder;
+    font-size: var(--font-size-medium);
+    align-self: flex-start; /* Align the h3 to the start of its container */
+}
+
+.text-content p {
+    font-size: var(--font-size-small);
+    align-self: center; /* Center the p within its container */
+}
+
+.text-content-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.text-content-2 h3 {
+    font-weight: bolder;
+    font-size: var(--font-size-medium);
+    color: var(--black-color);
+    align-self: flex-start; /* Align the h3 to the start of its container */
+}
+
+.text-content-2 p {
+    font-size: var(--font-size-small);
+    color: var(--black-color);
+    align-self: center; /* Center the p within its container */
+}
+
+.custom-list-item .text-content h3, .custom-list-item .text-content p {
+    color: var(--white-color);
+}
+
+.custom-list-item-reversed .text-content h3, .custom-list-item-reversed .text-content p {
+    color: var(--black-color);
+}
+
+.img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+/* responsive styles */
+@media (max-width: 768px) {
+    .custom-list-item, .custom-list-item-reversed {
+        max-width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .item-content {
+        max-width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .img {
+        max-width: 100%;
+        flex: 1 1 100%; /* Stack images on smaller screens */
+    }
+    
+    .title-row {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .description, .projects-header {
+        text-align: center;
+    }
+}
+
+
+</style>
+

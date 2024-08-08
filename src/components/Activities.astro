@@ -1,0 +1,110 @@
+---
+import { Image } from "astro:assets";
+---
+
+<div class="activities">
+    <div class="title-row">
+        <h2>Aktiviteter</h2>
+        <div class="line"></div>
+    </div>
+    <div class="activity-row">
+        <img src="/images/udtaler.png" alt="Activity 1" class="activity-image" />
+        <img src="/images/makker-par.png" alt="Activity 2" class="activity-image" />
+    </div>
+    <div class="activity-row">
+        <img src="/images/sportshold.png" alt="Activity 3" class="activity-image" />
+        <img src="/images/ung-til-ung.png" alt="Activity 4" class="activity-image" />
+    </div>
+    <div class="activity-row">
+        <img src="/images/madmekka.png" alt="Activity 5" class="activity-image" />
+        <img src="/images/camps.png" alt="Activity 6" class="activity-image" />
+    </div>
+    <div class="arrow-holder">
+        <img src="/arrow.png" class="arrow-image" />
+    </div>
+</div>
+
+<style>
+.activities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Gap between rows */
+    min-height: 100vh; /* Ensure the container takes the full height of the viewport */
+    padding: 10px; 
+    box-sizing: border-box; /* Ensure padding is included in width/height */
+}
+
+.title-row {
+    display: flex;
+    flex-direction: row; /* Ensure items are in a row */
+    align-items: center;
+    gap: 30px; /* Gmaking a gap between h2 and line */
+    color: #F0F0F0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.title-row h2 {
+    margin: 0;
+    font-size: 65px;
+    font-weight: bold;
+}
+
+.line {
+    height: 2px; /* Thickness of the line */
+    background: #F0F0F0; /* Color of the line */
+    width: 100%; /* Full width of the parent container */
+    max-width: 1200px; /* Increase the max width for a longer line */
+    margin: 0 20px; /* Margin around the line for spacing */
+}
+
+.activity-row {
+    display: flex;
+    justify-content: center;
+    gap: 46px; /* Gap between images in a row */
+}
+
+.activity-image {
+    flex: 1 1 calc(50% - 10px); /* Adjust size and allow wrapping */
+    max-width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px; /* Optional: add rounded corners */
+}
+
+.arrow-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px; 
+    margin-top: 30px;
+}
+
+.arrow-image {
+    flex: 1 1 calc(50% - 10px); /* Adjust size and allow wrapping */
+    max-width: 60%;
+}
+
+
+@media (max-width: 800px) {
+    .activity-image {
+        flex: 1 1 100%; /* Stack images on smaller screens */
+    }
+
+    .title-row h2 {
+        font-size: 50px; /* Adjust font size for smaller screens */
+    }
+
+    .line {
+        max-width: 100%; /* line fits within the viewport on small screens */
+        margin: 10px 0; /* Adjust margin for smaller screens */
+    }
+
+    .arrow-image {
+        flex: 1 1 100%; /* Stack images on smaller screens */
+    }
+}
+
+</style>

@@ -1,0 +1,19 @@
+/* styles.css */
+body {
+    background-color: #000000; /* Black background color for the entire page */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* Ensure the body takes up the full viewport height */
+    min-height: 100vh;
+    min-width: 100vh;
+}
+
+.future-content {
+    background-color: #F0F0F0; /* White background color for the div */
+    color: #000000; 
+    padding: 10px;
+    border-radius: 10px; /* rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* shadow effect kinda gives better visibility */
+    width: 100%;
+}

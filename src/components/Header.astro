@@ -1,0 +1,83 @@
+---
+---
+
+<header class="header-container">
+    <a href="/" class="logo-container">
+        <img
+            src="/logo.png"
+            alt="original-dfunk-logo"
+            width="180"
+            height="180"
+            class="logo-image"
+        />
+    </a>
+    <div class="header-div">
+        <h2>Kontakt os</h2>
+        <a href="https://dfunk.dk/" class="link-to-dfunk">www.dfunk.dk</a>
+    </div>
+</header>
+
+<style>
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    max-width: 7xl;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.logo-image {
+    border-radius: 2xl;
+    object-fit: cover;
+}
+
+.header-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    flex-grow: 1;
+    font-size: large;
+    color: #F0F0F0;
+}
+
+.link-to-dfunk {
+    color: #F0F0F0; /* Tailwind CSS class "text-zinc-900" equivalent */
+}
+
+@media (max-width: 640px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 5px;
+    }
+
+    .logo-container {
+        position: static;
+        transform: none;
+        margin-bottom: 10px;
+    }
+
+    .header-div {
+        justify-content: center;
+        margin-left: 0; /* resets the margin on smaller screens */
+    }
+}
+
+</style>

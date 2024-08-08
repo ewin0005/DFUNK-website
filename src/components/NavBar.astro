@@ -1,0 +1,63 @@
+---
+---
+
+<nav class="navbar">
+    <button class="nav-button" onclick=";scrollToSection('section1')">Fremtidsvej</button>
+    <button class="nav-button" onclick=";scrollToSection('section2')">Stemmer ud af boksen</button>
+    <button class="nav-button" onclick=";scrollToSection('section3')">Lokale fælleskaber</button>
+</nav>
+
+<style>
+.navbar {
+    display: flex;
+    flex-direction: row; /* Default to horizontal layout */
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Space between buttons */
+    padding: 40px; /* Padding around the navbar */
+    background-color: #000000; /* Background color of the navbar */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.nav-button {
+    background-color: #000000; /* Button background color */
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid #FA4B00; /* Border color */
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 22px; /* Font size for buttons */
+    font-weight: bold;
+    transition: background-color 0.3s;
+    flex: 1 1 auto; /* Allows buttons to grow and shrink as needed */
+    max-width: 300px; /* Maximum width for buttons */
+}
+
+.nav-button:hover {
+    background-color: #FA4B00; /* Hover color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        gap: 10px; /* Reduced space between buttons */
+    }
+
+    .nav-button {
+        font-size: 14px; /* Smaller font size on small screens */
+        padding: 8px 16px; /* Adjust padding for smaller screens */
+        max-width: none; /* Remove maximum width on small screens */
+        width: 100%; /* Make buttons full-width */
+    }
+}
+</style>
+
+<script>
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+</script>
