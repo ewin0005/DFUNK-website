@@ -1,0 +1,46 @@
+---
+// Button.astro
+interface ButtonProps {
+    label: string;
+    onClick?: () => void;
+    href?: string;
+}
+
+const { label, onClick, href } = Astro.props;
+---
+
+<a href={href} class="button" onclick={onClick}>
+    {label}
+</a>
+
+<style>
+.button {
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    text-align: center;
+    text-decoration: none;
+    background-color: #000000; /* Button background color */
+    color: #F0F0F0;
+    padding: 10px 20px;
+    border: 2px solid #FA4B00; /* Border color */
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    flex: 1 1 auto; /* Allows buttons to grow and shrink as needed */
+    max-width: 300px; /* Maximum width for buttons */
+}
+
+.button:hover {
+    background-color: #FA4B00;
+}
+@media (max-width: 768px) {
+
+.button {
+        font-size: 1.2rem; 
+        padding: 8px 16px; /* Adjust padding for smaller screens */
+        max-width: none; /* Remove maximum width on small screens */
+        width: 100%; /* Make buttons full-width */
+    }
+}
+</style>

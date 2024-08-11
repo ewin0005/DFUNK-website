@@ -1,0 +1,107 @@
+<!-- Back to Top Button Component -->
+<button id="back-to-top" class="back-to-top-button">
+    <div class="toTopArrow-holder">
+        <img src="/icons/toTop-arrow.png" class="toTopArrow-image" />
+    </div>
+</button>
+
+<style>
+  .back-to-top-button {
+      position: fixed;
+      bottom: 20px; 
+      right: 20px; 
+      background-color: #F0F0F0; 
+      border: none; 
+      border-radius: 50%; 
+      width: 70px; 
+      height: 70px; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease; 
+      display: none; 
+      margin-bottom: 40px;
+  }
+
+  .back-to-top-button:hover {
+      background-color: #FE9600; 
+  }
+
+  .toTopArrow-holder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px; 
+      
+  }
+
+  .toTopArrow-image {
+      width: 40px; 
+      height: auto;
+  }
+
+  p {
+      margin: 0; 
+      font-size: 14px; 
+  }
+
+  /* Responsive Design */
+  @media (max-width: 600px) {
+      .back-to-top-button {
+          width: 60px; 
+          height: 60px; 
+          bottom: 15px; 
+          right: 15px; 
+      }
+
+      .toTopArrow-image {
+          width: 25px; 
+      }
+
+      p {
+          font-size: 12px; 
+      }
+  }
+
+  @media (max-width: 400px) {
+      .back-to-top-button {
+          width: 40px; 
+          height: 40px; 
+          bottom: 10px; 
+          right: 10px; 
+      }
+
+      .toTopArrow-image {
+          width: 20px; 
+      }
+
+      p {
+          font-size: 10px; 
+      }
+  }
+</style>
+
+<script type="module">
+  document.addEventListener('DOMContentLoaded', () => {
+      const backToTopButton = document.getElementById('back-to-top');
+
+      // Show the button when the user scrolls down 100px from the top
+      window.addEventListener('scroll', () => {
+          if (window.scrollY > 100) {
+              backToTopButton.style.display = 'flex';
+          } else {
+              backToTopButton.style.display = 'none';
+          }
+      });
+
+      // Scroll to top when the button is clicked
+      backToTopButton.addEventListener('click', () => {
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+          });
+      });
+  });
+</script>
+

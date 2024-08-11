@@ -1,0 +1,111 @@
+---
+const address1 = "Hejrevej 26, 2. th, 2400 København NV";
+const address2 = "c/o Ungdomskulturhuset, Tage-Hansens Gade 2, bygning 7, 8000 Aarhus";
+const phone = "+45 26 77 89 40";
+const email = "mail@dfunk.dk";
+---
+
+<div id="contact-us" class="contact-us-component">
+    <div class="title-row">
+        <h1>Kontakt os</h1>
+        <div class="line"></div>
+    </div>
+    <div class="paragraph-container">
+        <p>Hvis du har spørgsmål, er du altid velkommen til at kontakte os på enten mail eller telefon.</p>
+        <div class="contact-info">
+            <p><strong>Adresse 1:</strong> <span class="address-details">{address1}</span></p>
+            <p><strong>Adresse 2:</strong> <span class="address-details">{address2}</span></p>
+            <p><strong>Telefon:</strong> 
+                <span class="contact-details">
+                    <a href={`tel:${phone}`} class="phone-link">{phone}</a>
+                </span>
+            </p>
+            <p><strong>Mail:</strong> 
+                <span class="contact-details">
+                    <a href={`mailto:${email}`} class="email-link">{email}</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+<style>
+.contact-us-component {
+    color: #F0F0F0;
+    background-color: #5009D2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 40px;
+    min-height: 50vh;
+    padding: 40px;
+    box-sizing: border-box;
+    margin-top: 80px;
+    width: 100%;
+}
+
+.title-row h1 {
+    margin: 0;
+    font-size: 4vw;
+    font-weight: bold;
+}
+
+.paragraph-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 20px;
+    width: 100%;
+    font-size: 1.2em;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.contact-info p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info strong {
+    width: 100px; 
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.address-details,
+.contact-details {
+    flex: 1;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.email-link,
+.phone-link {
+    color: #F0F0F0; /* Keeps the link color consistent with the text */
+    text-decoration: underline; /* Underline the link to indicate it's clickable */
+}
+
+.email-link:hover,
+.phone-link:hover {
+    color: #FFD700; /* Changes the color on hover to give visual feedback */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-info strong {
+        width: auto;
+        margin-right: 5px;
+    }
+}
+
+
+</style>

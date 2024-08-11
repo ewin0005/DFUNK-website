@@ -1,6 +1,7 @@
-<div class="voices-component">
+<section id="voices-component">
+<div id="voices-component" class="voices-component">
     <div class="title-row">
-        <h2>Stemmer ud af boksen</h2>
+        <h1>Stemmer ud af boksen</h1>
         <div class="line"></div>
     </div>
     <div class="paraghraph-container">
@@ -14,113 +15,131 @@
     </div>
     <div class="link-component">
         <h4>Læs mere på Stemme ud af boksens helt egen hjemmeside!</h4>
-        <a href="https://dfunk.dk/stemmerudafboksen/" class="button-link">Hjemmeside</a>
+        <a href="https://dfunk.dk/stemmerudafboksen/" class="button-link">Klik her</a>
     </div>
 </div>
 
 
-<style>
-    .voices-component {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 20px; /* Gap between rows */
-        min-height: 100vh; /* Ensure the container takes the full height of the viewport */
-        padding: 10px; 
-        box-sizing: border-box; /* Ensure padding is included in width/height */
-        margin-top: 80px;
-    }
-    
-    .title-row {
-        display: flex;
-        flex-direction: row; /* Ensure items are in a row */
-        align-items: center;
-        gap: 30px; /* Gmaking a gap between h2 and line */
-        color: #F0F0F0;
-        width: 100%;
-        box-sizing: border-box;
-    }
-    
-    .title-row h2 {
-        margin: 0;
-        font-size: 50px;
-        font-weight: bold;
-       margin-left: 5px;
-    }
-    
-    .line {
-        height: 2px; /* Thickness of the line */
-        background: #F0F0F0; /* Color of the line */
-        width: 100%; /* Full width of the parent container */
-        max-width: 450px; /* Increase the max width for a longer line */
-        margin: 0 20px; /* Margin around the line for spacing */
-    }
-    
-    .paraghraph-container {
-        display: flex;
-        justify-content: center;
-        color: #F0F0F0;
-        padding: 40px;
-        font-size: 22px;
-    }
-    
-    .plakat-image {
-        flex: 1 1 calc(50% - 10px); /* Adjust size and allow wrapping */
-        max-width: 100%;
-        height: auto;
-        object-fit: cover;
-        border-radius: 20px; /* Optional: add rounded corners */
-    }
-    
-    .link-component {
-        display: flex;
-        flex-direction: column; /* Ensure items are in a column */
-        align-items: center;
-        gap: 30px; /* Gmaking a gap between h2 and line */
-        color: #F0F0F0;
-        width: 100%;
-        box-sizing: border-box;
-        margin-top: 70px;
-        font-size: 26px;
-    }
 
-    .button-link {
+
+<style>
+   .voices-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    min-height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 80px;
+    width: 100%; /* Ensure full width */
+}
+
+.title-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    color: #F0F0F0;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.title-row h1 {
+    margin: 0;
+    font-size: var(--font-size-large);
+    font-weight: bolder;
+}
+
+.line {
+    height: 2px;
+    background: #F0F0F0;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 20px;
+}
+
+.paraghraph-container {
+    display: flex;
+    justify-content: center;
+    color: #F0F0F0;
+    padding: 40px;
+    font-size: 1.2em; /* Relative font size */
+    text-align: start; /* Center text for better readability on small screens */
+}
+
+.plakat-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.link-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    color: #F0F0F0;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 70px;
+    font-size: 1.4em; /* Relative font size */
+}
+
+.button-link {
     color: white;
-    padding: 10px 20px;
-    background-color: #5009D2; /* Hover color */
-    border-radius: 30px; /* Rounded corners */
+    padding: 10px 50px;
+    background-color: #5009D2;
+    border-radius: 30px;
     cursor: pointer;
-    font-size: 22px; /* Font size for buttons */
+    font-size: 1.2em;
     font-weight: bold;
     transition: background-color 0.3s;
-    flex: 1 1 auto; /* Allows buttons to grow and shrink as needed */
-    max-width: 300px; /* Maximum width for buttons */
+    max-width: 300px;
+    text-align: center; /* Center the text inside the button */
 }
 
 .button-link:hover {
-    background-color: #000000; /* Button background color */
-    border: 2px solid #5009D2; /* Border color */
+    background-color: #000000;
+    border: 2px solid #5009D2;
 }
-    
-    
-    @media (max-width: 800px) {
-        .activity-image {
-            flex: 1 1 100%; /* Stack images on smaller screens */
-        }
-    
-        .title-row h2 {
-            font-size: 50px; /* Adjust font size for smaller screens */
-        }
-    
-        .line {
-            max-width: 100%; /* line fits within the viewport on small screens */
-            margin: 10px 0; /* Adjust margin for smaller screens */
-        }
-    
-        .arrow-image {
-            flex: 1 1 100%; /* Stack images on smaller screens */
-        }
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+    .title-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-    
-    </style>
+
+    .line {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .paraghraph-container {
+        padding: 20px;
+        font-size: 1em;
+    }
+
+    .link-component {
+        font-size: 1.2em;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-row h1 {
+        font-size: 4vw; /* Increase size for small screens */
+    }
+
+    .button-link {
+        padding: 8px 16px;
+        font-size: 1em;
+    }
+}  
+</style>

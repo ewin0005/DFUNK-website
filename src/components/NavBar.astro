@@ -1,11 +1,13 @@
 ---
+import Button from '../components/Buttons.astro';
 ---
 
 <nav class="navbar">
-    <button class="nav-button" onclick=";scrollToSection('section1')">Fremtidsvej</button>
-    <button class="nav-button" onclick=";scrollToSection('section2')">Stemmer ud af boksen</button>
-    <button class="nav-button" onclick=";scrollToSection('section3')">Lokale fælleskaber</button>
+    <Button label="Fremtidsvej" href="#future-component" />
+    <Button label="Stemmer ud af boksen" href="#voices-component" />
+    <Button label="Lokale fælleskaber" href="#local-community-component" />
 </nav>
+
 
 <style>
 .navbar {
@@ -42,22 +44,19 @@
     .navbar {
         flex-direction: column; /* Stack buttons vertically on small screens */
         gap: 10px; /* Reduced space between buttons */
-    }
-
-    .nav-button {
-        font-size: 14px; /* Smaller font size on small screens */
-        padding: 8px 16px; /* Adjust padding for smaller screens */
-        max-width: none; /* Remove maximum width on small screens */
-        width: 100%; /* Make buttons full-width */
+        width: 100%;
     }
 }
 </style>
 
 <script>
-function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-    }
-}
+document.querySelectorAll('.nav-button').forEach(button => {
+    button.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+    });
+});
 </script>
+

@@ -7,20 +7,86 @@ import { Image } from "astro:assets";
         <h2>Aktiviteter</h2>
         <div class="line"></div>
     </div>
+
+    <!-- First Activity: Udtaler -->
     <div class="activity-row">
-        <img src="/images/udtaler.png" alt="Activity 1" class="activity-image" />
-        <img src="/images/makker-par.png" alt="Activity 2" class="activity-image" />
+        <div class="activity-image">
+            <img src="/images/udtaler.png" alt="Activity 1" />
+            <div class="content-overlay">
+                <h2>Udtaler</h2>
+                <p>
+                    Udtaler er et kreativt meningsdanner-forløb for unge med flugterfaringer, som gerne vil sætte deres præg på samfundet. Forløbet har hidtil kørt over tre omgange i 2021, 2022 og 2023, 
+                    hvor vores Udtalere har snakket, diskuteret, provokeret, inspireret og nytænkt, hvordan demokratisk deltagelse kan se ud.
+                </p>
+            </div>
+        </div>
+
+        <!-- Second Activity: Makker-par -->
+        <div class="activity-image">
+            <img src="/images/makker-par.png" alt="Activity 2" />
+            <div class="content-overlay">
+                <h2>Makker-par</h2>
+                <p>
+                    Makker-par er både for dig, der er kommet til Danmark som flygtning og leder efter et job eller vil søge ind på en uddannelse og for dig, 
+                    der selv har erfaring med det danske uddannelsessystem og jobmarked. Som Makker-par udforsker I fremtidsplaner i uformelle hverdagsrammer og bruger tid på oplevelser og aktiviteter, som I synes er sjove.
+                </p>
+            </div>
+        </div>
     </div>
+
+    <!-- Third Activity: Sportshold -->
     <div class="activity-row">
-        <img src="/images/sportshold.png" alt="Activity 3" class="activity-image" />
-        <img src="/images/ung-til-ung.png" alt="Activity 4" class="activity-image" />
+        <div class="activity-image">
+            <img src="/images/sportshold.png" alt="Activity 3" />
+            <div class="content-overlay">
+                <h2>Sportshold</h2>
+                <p>
+                    Vores sportshold er for dig, der gerne vil dyrke sport med andre unge. Vores sportshold er gratis, og de er for alle uanset niveau. Fokus er på at have det sjovt og dele sin sportsglæde med andre.
+                    Hvis du gerne vil være med, skal du blot dukke op på det oplyste tid og sted. Find ydeligere informationen om vores hold længere nede på siden.
+                </p>
+            </div>
+        </div>
+
+        <!-- Fourth Activity: Ung-til-ung -->
+        <div class="activity-image">
+            <img src="/images/ung-til-ung.png" alt="Activity 4" />
+            <div class="content-overlay">
+                <h2>Ung-til-ung</h2>
+                <p>
+                    Ung-til-ung er for dig, der gerne vil 
+                    mødes med andre unge om forskellige fritidsaktiviteter og udflugter. Vi laver noget nyt, hver gang vi er sammen, og det kan være alt fra en tur i teatret, spilaftener, bowlingture, mm.
+                </p>
+            </div>
+        </div>
     </div>
+
+    <!-- Fifth Activity: Madmekka -->
     <div class="activity-row">
-        <img src="/images/madmekka.png" alt="Activity 5" class="activity-image" />
-        <img src="/images/camps.png" alt="Activity 6" class="activity-image" />
+        <div class="activity-image">
+            <img src="/images/madmekka.png" alt="Activity 5" />
+            <div class="content-overlay">
+                <h2>Madmekka</h2>
+                <p>
+                    Madmekka er for dig, der gerne vil mødes om mad og fællesspisning med andre unge. Madmekka er gratis, og vi laver mad fra hele verden. Vi hjælpes alle om alt fra madlavning, opvask og oprydning.
+                </p>
+            </div>
+        </div>
+
+        <!-- Sixth Activity: Camps -->
+        <div class="activity-image">
+            <img src="/images/camps.png" alt="Activity 6" />
+            <div class="content-overlay">
+                <h2>Camps</h2>
+                <p>
+                    Camps er et projekt, hvor unge i alderen 16-30 år mødes og skaber uforglemmelige oplevelser sammen henover 3-5 dage. 
+                    Du kan enten komme med på camp som deltager eller tage ekstra ansvar og blive en del af et frivilligteam, hvor I sammen skal planlægge og afholde campen. 
+                </p>
+            </div>
+        </div>
     </div>
+
     <div class="arrow-holder">
-        <img src="/arrow.png" class="arrow-image" />
+        <img src="/icons/arrow.png" class="arrow-image" />
     </div>
 </div>
 
@@ -44,12 +110,14 @@ import { Image } from "astro:assets";
     color: #F0F0F0;
     width: 100%;
     box-sizing: border-box;
+    margin-bottom: 20px;
 }
 
 .title-row h2 {
     margin: 0;
-    font-size: 65px;
+    font-size: 5vw;
     font-weight: bold;
+    text-align: center;
 }
 
 .line {
@@ -57,21 +125,71 @@ import { Image } from "astro:assets";
     background: #F0F0F0; /* Color of the line */
     width: 100%; /* Full width of the parent container */
     max-width: 1200px; /* Increase the max width for a longer line */
-    margin: 0 20px; /* Margin around the line for spacing */
+    margin: 0 auto; /* Margin around the line for spacing */
 }
 
 .activity-row {
     display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
     justify-content: center;
-    gap: 46px; /* Gap between images in a row */
+    gap: 20px; /* Adjust gap between images in a row */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .activity-image {
-    flex: 1 1 calc(50% - 10px); /* Adjust size and allow wrapping */
-    max-width: 50%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 20px; /* Optional: add rounded corners */
+    position: relative; /* Makes a containing block for absolutely positioned children */
+    flex: 1 1 calc(50% - 20px); /* Adjust size and allow wrapping */
+    max-width: 100%;
+    height: 500px; /* Fixed height for consistency */
+    overflow: hidden; /* Hide overflow for better visual appearance */
+    border-radius: 15px;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.activity-image img {
+    width: 100%;
+      height: 100%;
+      object-fit: cover; /* Cover the entire container */
+      border-radius: 15px;
+}
+
+.content-overlay {
+    position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #0000; /* Slightly transparent black background */
+      color: white;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+      gap: 20px;
+      padding: 20px;
+      border-radius: 15px;
+      z-index: 1;
+      transition: opacity 0.3s ease;
+}
+
+.content-overlay h2 {
+    font-weight: bold;
+    font-size: 3em; /* Responsive font size */
+}
+
+.content-overlay p {
+    font-size: 1.3em;
+}
+
+.activity-image:hover img {
+    opacity: 0;
+}
+
+.activity-image:hover .content-overlay {
+    opacity: 1;
 }
 
 .arrow-holder {
@@ -79,32 +197,40 @@ import { Image } from "astro:assets";
     align-items: center;
     justify-content: center;
     padding: 70px; 
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .arrow-image {
-    flex: 1 1 calc(50% - 10px); /* Adjust size and allow wrapping */
-    max-width: 60%;
+    max-width: 100%; 
+    height: auto;
 }
 
 
 @media (max-width: 800px) {
     .activity-image {
-        flex: 1 1 100%; /* Stack images on smaller screens */
+        flex: 1 1 100%;
+        height: auto;
     }
 
     .title-row h2 {
-        font-size: 50px; /* Adjust font size for smaller screens */
+        font-size: 2rem;
     }
 
     .line {
-        max-width: 100%; /* line fits within the viewport on small screens */
-        margin: 10px 0; /* Adjust margin for smaller screens */
+        max-width: 100%; 
+        margin: 10px 0; 
+    }
+}
+
+@media (max-width: 480px) {
+    .title-row h2 {
+        font-size: 1.5em; 
     }
 
-    .arrow-image {
-        flex: 1 1 100%; /* Stack images on smaller screens */
+    .arrow-holder {
+        padding: 20px; 
     }
+
 }
 
 </style>

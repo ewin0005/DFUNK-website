@@ -4,15 +4,17 @@
 <header class="header-container">
     <a href="/" class="logo-container">
         <img
-            src="/logo.png"
+            src="/icons/logo.png"
             alt="original-dfunk-logo"
-            width="180"
-            height="180"
+            width="190"
+            height="190"
             class="logo-image"
         />
     </a>
     <div class="header-div">
-        <h2>Kontakt os</h2>
+        <a href="#contact-us" class="contact-link">
+            <h2>Kontakt os</h2>
+        </a>
         <a href="https://dfunk.dk/" class="link-to-dfunk">www.dfunk.dk</a>
     </div>
 </header>
@@ -39,6 +41,7 @@
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
+    max-height: fit-content;
 }
 
 .logo-image {
@@ -51,10 +54,20 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    gap: 20px;
+    gap: 30px;
     flex-grow: 1;
-    font-size: large;
+    font-size: 1.8vw;
+    font-weight: lighter;
     color: #F0F0F0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.header-div .contact-link {
+    color: inherit; /* Keeps the text color consistent */
+    text-decoration: none; /* Removes the underline from the link */
 }
 
 .link-to-dfunk {

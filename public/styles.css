@@ -1,19 +1,113 @@
-/* styles.css */
+/* Global Styles */
 body {
-    background-color: #000000; /* Black background color for the entire page */
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    /* Ensure the body takes up the full viewport height */
-    min-height: 100vh;
-    min-width: 100vh;
+    box-sizing: border-box;
+    background-color: #000000;
 }
 
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+}
+/* Navbar buttonStyles */
+.nav-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: black;
+    border-radius: 30px;
+    text-align: center;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #FA4B00;
+}
+
+/* Future Component Styles */
 .future-content {
-    background-color: #F0F0F0; /* White background color for the div */
-    color: #000000; 
-    padding: 10px;
-    border-radius: 10px; /* rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* shadow effect kinda gives better visibility */
-    width: 100%;
+    background-color: #F0F0F0;
+    color: #000000;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.future-content h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.future-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.back-to-top-button {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    background-color: #5009D2; 
+    color: #F0F0F0;
+    border: none; /* Remove border */
+    border-radius: 50%; /* Circular button */
+    width: 50px; 
+    height: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px; 
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.back-to-top-button:hover {
+    background-color: #FFD700; 
+}
+
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .future-content {
+        padding: 30px 10px;
+    }
+
+    .future-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .future-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .future-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .future-content p {
+        font-size: 0.9rem;
+    }
 }

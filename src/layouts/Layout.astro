@@ -11,6 +11,8 @@ interface Props {
 }
 
 import Header from "../components/Header.astro"
+import BackToTop from "../components/BackToTop.astro"; // Import the BackToTop component
+
 
 const { title, description = "A community"} = Astro.props;
 ---
@@ -26,10 +28,18 @@ const { title, description = "A community"} = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<link rel="stylesheet" href="/styles.css">
 		<title>{title}</title> 
+		
 	</head>
 	<body class="min-h-screen">
-		<Header />
-		<slot />
+		<header>
+			<Header />
+		</header>
+		<main>
+			<slot />
+		</main>
+		<BackToTop /> <!-- Add the BackToTop component here -->
 	</body>
 </html>
+
+
 
